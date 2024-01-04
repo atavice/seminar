@@ -1,0 +1,32 @@
+to do
+
+1-choose an algorithm and search among hyperparams
+	-weight initialization
+		-naive initialization
+		-LeCun initialization
+		-Xavier init
+		-Kaiming init
+	-normalization
+		-BatchNorm
+	-neural architecture
+		-AlexNet
+		-ResNet
+		-VGG
+		-ImageNet
+	-choosing learning rate 
+		-vanilla learning rate
+		-learning rate warmup
+		-cyclical learning rate
+		-diminishing learning rate
+2-benchmarking of optimization algorithms
+	-GD
+	-SGD
+	-Momentum
+	-Adaptive Gradient Methods
+		-AdaGrad
+		-RMSProp
+		-Adam
+3-analysis
+	-accuracy beenchmarking
+	-overfitting benchmarking
+	-
