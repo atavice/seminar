@@ -36,39 +36,3 @@ to do
 
 
 
-import torch
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader
-from dataloader import get_mnist_dataloaders  # Import your data loader function
-from model import SimpleNN  # Import your model
-
-
-
-
-result = get_mnist_dataloaders()
-
-if result is not None:
-    train_loader, test_loader = result
-    print("Train Loader Type:", type(train_loader))
-    print("Test Loader Type:", type(test_loader))
-else:
-    print("The result is None.")
-
-
-
-# Define a transform to normalize the data
-transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
-
-# Download and load the training data
-train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
-
-# Download and load the test data
-test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=64, shuffle=False)
-
-# Print the size of the datasets
-print("Training dataset size:", len(train_dataset))
-print("Test dataset size:", len(test_dataset))
-
-train_loader, test_loader
